@@ -9,13 +9,21 @@ func fibonacci(i int) uint64 {
 
 	var ret uint64
 
-	if 0 == i {
+	switch i {
+	case 0:
 		ret = 0
-	} else if 1 == i {
+	case 1:
 		ret = 1
-	} else {
+	default:
 		ret = fibonacci(i-1) + fibonacci(i-2)
 	}
+	// if 0 == i {
+	// 	ret = 0
+	// } else if 1 == i {
+	// 	ret = 1
+	// } else {
+	// 	ret = fibonacci(i-1) + fibonacci(i-2)
+	// }
 	return ret
 }
 
